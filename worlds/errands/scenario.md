@@ -64,7 +64,7 @@ You:     Con tarjeta. Gracias.
 
 ## Common Settings
 
-### Grocery/Store
+### Groceries & Store
 - ¿Dónde puedo encontrar...? (Where can I find...?)
 - ¿Tienen esto en otro tamaño? (Do you have this in another size?)
 - ¿Está en oferta? (Is it on sale?)

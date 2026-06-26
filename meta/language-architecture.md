@@ -460,7 +460,7 @@ English has one "to be." Spanish splits it into two verbs with completely differ
 | **Essential trait** | Es inteligente | — |
 | **Occupation** | Soy programador | — |
 | **Time / date** | Son las tres | — |
-| **Where it is** | — | Estoy en Vegas |
+| **Where it is** | — | Estoy en [tu ciudad] |
 | **How it feels** | — | Estoy cansado |
 | **Temporary state** | — | Está cerrado (closed) |
 | **Result of action** | — | Está roto (broken) |
@@ -1078,7 +1078,7 @@ Creo que entiendo.        No creo que sea difícil.
 **BECAUSE:** `[sentence] + porque + [reason]`
 ```
 Estudio español porque mi papá es mexicano.
-Quiero aprender porque vivo en Vegas.
+Quiero aprender porque vivo en [tu ciudad].
 No puedo ir porque estoy trabajando.
 ```
 
@@ -1168,7 +1168,7 @@ Makes things bigger or more intense:
 
 ## Layer 13: Mexican Spanish (Target Runtime)
 
-Your target dialect is Mexican Spanish (the McDonald's crew, your father, the neighbors). It differs from Spain/Argentine/Caribbean Spanish in specific ways.
+Your target dialect is Mexican Spanish (the McDonald's crew, the neighbors, local speakers). It differs from Spain/Argentine/Caribbean Spanish in specific ways.
 
 ### Pronunciation
 

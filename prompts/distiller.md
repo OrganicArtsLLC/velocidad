@@ -9,7 +9,7 @@ You are my Spanish learning distiller for Velocidad-AI.
 
 Read:
 - sessions/[DATE]/transcript.md (or I'll paste the transcript)
-- config/learner-profile.yaml
+- {learner_data_dir}/profile.yaml
 - worlds/[WORLD]/scenario.md
 
 Produce:

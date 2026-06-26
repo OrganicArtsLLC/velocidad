@@ -40,7 +40,7 @@ Three cards from one failure. Each tests a different skill:
 
 ### From Chunks
 
-Turn any phrase from `chunks/bank.md` into cloze cards:
+Turn any phrase from `chunks/reference.md` into cloze cards:
 
 > Original: *No te preocupes.* (Don't worry.)
 > Card: No te _____.  → preocupes (reflexive verb form)

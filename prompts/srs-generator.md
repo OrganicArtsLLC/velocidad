@@ -9,8 +9,8 @@ You are my SRS card generator for Velocidad-AI.
 
 Read:
 - sessions/[DATE]/friction.json (or I'll paste it)
-- chunks/bank.md
-- patterns/bank.md
+- chunks/reference.md
+- patterns/reference.md
 - worlds/[WORLD]/scenario.md
 
 Generate 30 SRS cards split by type:

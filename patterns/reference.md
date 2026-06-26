@@ -201,7 +201,7 @@ These connect simple sentences into flowing conversation. Each one doubles your 
 - Estoy aquí porque quiero aprender — I'm here because I want to learn
 - No puedo ir porque estoy ocupado — I can't go because I'm busy
 - Hablo español porque mi papá es mexicano — I speak Spanish because my dad is Mexican
-- Quiero aprender porque vivo en Vegas — I want to learn because I live in Vegas
+- Quiero aprender porque vivo en [tu ciudad] — I want to learn because I live in [your city]
 - Estudio porque es importante para mí — I study because it's important to me
 
 ---

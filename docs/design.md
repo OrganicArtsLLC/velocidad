@@ -32,7 +32,7 @@ Velocidad inverts the model: **speak first, fail, log the failure, drill exactly
 ### What Success Looks Like
 
 - **Week 1-2:** Awkward, lots of friction, but patterns emerging
-- **Week 3-4:** Coffee context becomes comfortable
+- **Week 3-4:** Your core scenario becomes comfortable
 - **Week 5-8:** Scenarios stack, repair phrases automatic
 - **Week 12:** Conversationally operational (not perfect, but useful)
 
@@ -68,13 +68,18 @@ This never changes shape. It only increases depth.
 4. **Shadowing** (5 min) — 30-60 sec native audio, listen once, shadow 3x
 5. **Micro-Deploy** (optional) — One real interaction, even 20 seconds
 
-### Three Agent Services (Deliberately Minimal)
+### The Agent Services (Deliberately Minimal)
 
-| Service | Input | Output |
-|---|---|---|
-| **Roleplay Runner** | Current scenario + learner profile | Interactive conversation with escalating difficulty |
-| **Drill Generator** | Friction log + scenario | 10 production + 5 repair + 5 variation reps |
-| **SRS Generator** | Friction log + chunk bank | Spaced repetition cards (production-first) |
+Six prompts cover the full loop. Most days you only need the master prompt.
+
+| Prompt | Purpose |
+|---|---|
+| `master.md` | All-in-one daily engine (session + distill + drill + plan) |
+| `session-runner.md` | Roleplay-only mode |
+| `distiller.md` | Extract friction, chunks, patterns from a transcript |
+| `srs-generator.md` | Generate spaced-repetition cards from failures |
+| `session-planner.md` | Plan tomorrow's session + micro-deploy mission |
+| `meta-observer.md` | Weekly recursive system review |
 
 What we **don't** build: dashboards, progress trees, gamification, curriculum planning tools, elaborate tracking.
 
@@ -83,9 +88,9 @@ What we **don't** build: dashboards, progress trees, gamification, curriculum pl
 One main scenario per week, deep. Light maintenance of previous scenarios.
 
 ```
-Week 1: Coffee World         (order, clarify, small talk, pay, handle mistakes)
-Week 2: Grocery World        (find items, ask help, checkout) + coffee maintenance
-Week 3: Small Talk World     (weather, plans, compliments) + previous maintenance
+Week 1: McDonald's World     (order, clarify, small talk, pay, handle mistakes)
+Week 2: Errands World        (find items, ask help, checkout) + mcdonalds maintenance
+Week 3: Vecinos World        (greetings, weather, plans) + previous maintenance
 Week 4+: Scenarios stack     (patterns compound across contexts)
 ```
 
@@ -212,21 +217,22 @@ These are what separate "knows words" from "can converse."
 
 ### MVP Scope (Build This First)
 
-**3 worlds only:**
-- `cafe/`
-- `grocery/`
-- `smalltalk/`
+**Four worlds:**
+- `worlds/mcdonalds/` — the safe lab
+- `worlds/casa/` — house workers
+- `worlds/vecinos/` — neighbors
+- `worlds/errands/` — daily errands
 
 **1 shared system:**
 - friction log → SRS generation → next session drills
 
-**4 agent prompts:**
+**Six agent prompts:**
 1. Session Runner (roleplay)
 2. Distiller (friction extraction)
 3. SRS Generator (card creation)
 4. Session Planner (tomorrow's plan)
-
-**1 master prompt** that chains all four.
+5. Meta-Observer (weekly system review)
+6. Master prompt that chains the daily loop
 
 ### Technical Stack Decisions Needed
 
@@ -243,48 +249,46 @@ These are what separate "knows words" from "can converse."
 
 ```
 velocidad/
-├── README.md
+├── readme.md
 ├── docs/
 │   └── design.md                    # This document
 ├── config/
-│   ├── learner-profile.yaml         # Personal context + preferences
+│   ├── learner-profile-template.yaml  # Profile schema to copy into your data dir
+│   ├── paths.yaml.template          # Points the engine at your private data dir
 │   └── rules-of-immersion.md        # Agent behavior constraints
 ├── worlds/
-│   ├── cafe/
-│   │   └── scenario.md              # Ladder + NPC lines
-│   ├── grocery/
-│   │   └── scenario.md
-│   └── smalltalk/
-│       └── scenario.md
+│   ├── mcdonalds/scenario.md        # Ladder + NPC lines
+│   ├── casa/scenario.md
+│   ├── vecinos/scenario.md
+│   └── errands/scenario.md
 ├── sessions/
-│   └── YYYY-MM-DD/
-│       ├── transcript.md            # Roleplay record
-│       ├── friction.json            # What broke
-│       ├── corrections.md           # Agent feedback
-│       └── next-drills.md           # Tomorrow's targeted drills
+│   └── TEMPLATE.md                  # Session folder structure (lives in learner data dir)
 ├── srs/
 │   ├── box1.md                      # Review today
 │   ├── box2.md                      # Review in 2 days
 │   ├── box3.md                      # Review in 7 days
 │   └── box4.md                      # Review in 21 days
 ├── chunks/
-│   └── bank.md                      # Accumulated mastered phrases
+│   └── reference.md                 # Universal phrase reference
 ├── patterns/
-│   └── bank.md                      # Grammar-as-patterns
-├── prompts/
-│   ├── session-runner.md            # Roleplay prompt
-│   ├── distiller.md                 # Friction extraction prompt
-│   ├── srs-generator.md             # Card generation prompt
-│   ├── session-planner.md           # Tomorrow planner prompt
-│   └── master.md                    # All-in-one daily prompt
-└── metrics.md                       # Minimal: days practiced, scenarios conquered
+│   └── reference.md                 # Universal sentence templates
+└── prompts/
+    ├── master.md                    # All-in-one daily prompt
+    ├── session-runner.md            # Roleplay prompt
+    ├── distiller.md                 # Friction extraction prompt
+    ├── srs-generator.md             # Card generation prompt
+    ├── session-planner.md           # Tomorrow planner prompt
+    └── meta-observer.md             # Weekly system review prompt
 ```
+
+Personal sessions, SRS state, and profile live in a separate private learner-data directory
+(see `docs/LEARNER-DATA-SPEC.md`), not in the engine repo.
 
 ### What to Build, In Order
 
 1. **Config files** — learner profile + immersion rules
-2. **Cafe world** — scenario ladder with NPC lines
-3. **Prompts** — the 4 agent prompts + master prompt
+2. **First world (mcdonalds)** — scenario ladder with NPC lines
+3. **Prompts** — the daily loop prompts + master prompt
 4. **Session template** — empty session folder structure
 5. **SRS skeleton** — empty box files with instructions
 6. **Chunk + pattern banks** — empty with starter entries
@@ -296,4 +300,4 @@ You don't wait to be ready. You deploy under guardrails. You log friction. You r
 
 ---
 
-*Last Updated: February 19, 2026*
+*Last Updated: April 10, 2026*

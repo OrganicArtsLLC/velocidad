@@ -101,7 +101,7 @@ These processes don't activate during passive input. Production literally rewire
 5. Practice producing it in similar contexts.
 
 **How Velocidad integrates it:**
-- The `chunks/bank.md` file IS a sentence mine, organized by world.
+- The `chunks/reference.md` file IS a sentence mine, organized by world.
 - Every session debrief extracts useful phrases and adds them to the bank.
 - Patterns are derived from mined sentences, not textbook rules.
 

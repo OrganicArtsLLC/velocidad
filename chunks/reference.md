@@ -124,7 +124,7 @@ These are your operating system. They keep you IN Spanish when everything else f
 | Tengo sueño | I'm sleepy | "I have sleep" |
 | Tengo prisa | I'm in a rush | "I have hurry" |
 
-### Weather (You Live in Vegas)
+### Weather
 
 | Chunk | English | Note |
 |-------|---------|------|
@@ -132,7 +132,7 @@ These are your operating system. They keep you IN Spanish when everything else f
 | Hace sol | It's sunny | 300+ days/year |
 | Hace frío | It's cold | December-February |
 | Hace buen tiempo | Nice weather | |
-| Está lloviendo | It's raining | Rare but dramatic in Vegas |
+| Está lloviendo | It's raining | Rare but dramatic in a dry climate |
 
 ---
 
@@ -372,7 +372,7 @@ Connection through shared shows — works with neighbor adults (Bridgerton) and 
 
 ---
 
-## Errands (Vegas General)
+## Errands
 
 Highest frequency. Lowest stakes. Daily confidence builder.
 
@@ -393,7 +393,7 @@ Highest frequency. Lowest stakes. Daily confidence builder.
 |-------|---------|------|
 | ¿Dónde puedo encontrar...? | Where can I find...? | Store |
 | ¿Tienen esto en otro tamaño? | Do you have this in another size? | Shopping |
-| ¿Está en oferta? | Is it on sale? | Vegas loves deals |
+| ¿Está en oferta? | Is it on sale? | Common in shops |
 | ¿Me puede ayudar? | Can you help me? | Universal |
 | ¿A qué hora cierran? | What time do you close? | |
 | ¿Aceptan tarjeta? | Do you accept cards? | |
@@ -498,7 +498,7 @@ Chunks that mark you as learning from Mexicans, not textbooks.
 | Cafecito | Little coffee | Diminutive = warm |
 | Momentito | Just a moment | Softer than momento |
 | Poquito | A tiny bit | Un poquito de leche |
-| Mijo/Mija | My son/daughter | Your dad may call you this |
+| Mijo/Mija | My son/daughter | An older relative may call you this |
 
 ---
 

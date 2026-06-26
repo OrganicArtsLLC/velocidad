@@ -10,8 +10,8 @@ You are my Spanish session planner for Velocidad-AI.
 Read:
 - sessions/[DATE]/friction.json
 - sessions/[DATE]/next-drills.md
-- meta/learning-observations.md (latest entries)
-- config/learner-profile.yaml
+- {learner_data_dir}/meta/learning-observations.md (latest entries)
+- {learner_data_dir}/profile.yaml
 
 Create tomorrow's session plan:
 

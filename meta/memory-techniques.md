@@ -178,8 +178,8 @@ After every session, generate 30 cards:
 | **McDonald's** | The one you go to 2-3x/week | Ordering, food, money, courtesy |
 | **Your House** | Rooms, yard, garage | Directions, rooms, actions, tools |
 | **Neighbor's Yard** | The fence, their yard, front door | Greetings, family, weather, plans |
-| **Dad's Phone** | Phone in your hand, his voice | Emotional phrases, heritage, family terms |
-| **Vegas Strip/Stores** | Drive, park, counter, table | Errands, restaurants, transactions |
+| **Phone Call** | Phone in your hand, a familiar voice | Emotional phrases, heritage, family terms |
+| **Town/Stores** | Drive, park, counter, table | Errands, restaurants, transactions |
 
 ### How to Build a Palace
 
@@ -202,8 +202,8 @@ Each week, add 3 new "stations" to each palace. By week 8:
 - McDonald's = 32 stations = 32+ phrases automatic
 - House = 32 stations
 - Neighbor = 32 stations
-- Dad's phone = 32 stations
-- Vegas errands = 32 stations
+- Phone call = 32 stations
+- Town errands = 32 stations
 - **Total: 160+ chunks in permanent memory**
 
 ---
@@ -276,7 +276,7 @@ Step 4: "No necesito cambio, gracias"      (say 3x)
 - Any phrase longer than 4 words
 - Phrases you stumble on mid-way
 - Formal/polished phrases you want to nail (greetings, farewells)
-- Emotional phrases (heritage conversation with dad)
+- Emotional phrases (a heritage conversation with a relative)
 
 ### Example: Heritage Phrase
 
@@ -391,7 +391,7 @@ When learning a new Spanish concept:
 
 **What:** Attach strong emotions to the Spanish you're learning. Emotional memories are stored in the amygdala alongside the hippocampus, creating dual pathways.
 
-**Why it works for you:** Your entire motivation is emotional — heritage, father, family, belonging. USE that.
+**Why it works for you:** If your motivation is emotional — heritage, family, belonging — USE that.
 
 ### The Emotional Tagging System
 
@@ -402,7 +402,7 @@ When you learn a chunk, tag it with a real person and a real feeling:
 | Muchas gracias | McDonald's crew (María) | Warmth, gratitude | Handing you the coffee with a smile |
 | Te quiero | Heritage family member | Love, connection, reclamation | Meeting them in person |
 | Que tenga buen día | McDonald's crew | Belonging, "almost like Mexico" | Walking out the door |
-| Me da gusto verte | Father, in person | Joy, reunion | Seeing him at the door |
+| Me da gusto verte | A relative, in person | Joy, reunion | Seeing them at the door |
 | Estoy aprendiendo | Yourself | Pride, vulnerability | First real exchange |
 
 ### How to Encode Emotionally
@@ -726,7 +726,7 @@ Agent throws you a random situation. You have 5 seconds to produce the right phr
 Stand in your kitchen. Pretend there's a worker. Point and give directions aloud in Spanish for 60 seconds straight.
 
 **Drill 5: The Phone Call.**
-Hold your phone. Pretend you're calling your dad. Say your greeting, ask about his day, share family news. All in Spanish. Out loud.
+Hold your phone. Pretend you're calling a relative. Say your greeting, ask about their day, share family news. All in Spanish. Out loud.
 
 ---
 

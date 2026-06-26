@@ -26,7 +26,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
 
 Note on dual licensing
 ======================
-The ENGINE CODE (prompts/, config/, meta/, scripts/) is licensed under GPL-3.0.
-The CONTENT (language-reference/, chunks/, patterns/, worlds/, sessions/TEMPLATE.md)
-is separately licensed under Creative Commons Attribution-ShareAlike 4.0 International.
-See CONTENT-LICENSE for details.
+The ENGINE & METHODOLOGY (prompts/, config/, meta/, and the methodology
+specifications in docs/ — except docs/LEARNER-DATA-SPEC.md) is licensed under GPL-3.0.
+The CONTENT (language-reference/, chunks/, patterns/, worlds/, sessions/TEMPLATE.md,
+and docs/LEARNER-DATA-SPEC.md) is separately licensed under Creative Commons
+Attribution-ShareAlike 4.0 International. See CONTENT-LICENSE for details.

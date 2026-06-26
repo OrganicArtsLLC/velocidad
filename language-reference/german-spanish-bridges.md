@@ -136,7 +136,7 @@
 - **Soy** americano — I am American (permanent)
 - **Estoy** cansado — I am tired (temporary)
 - **Soy** [nombre] — I am [name] (identity)
-- **Estoy** en Vegas — I am in Vegas (location)
+- **Estoy** en [tu ciudad] — I am in [your city] (location)
 
 🇩🇪 **German speakers:** This is NEW. German/English don't split "to be."
 

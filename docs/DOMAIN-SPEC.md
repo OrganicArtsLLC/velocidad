@@ -35,9 +35,9 @@ Any directory that satisfies this spec is a valid Velocidad domain.
 ├── reference/                # Domain reference library (equiv. to language-reference/)
 │   └── *.md                  # Topic-organized reference files
 ├── chunks/
-│   └── bank.md               # Production chunks (vocabulary, phrases, formulas)
+│   └── reference.md          # Production chunks (vocabulary, phrases, formulas)
 └── patterns/
-    └── bank.md               # Sentence/output templates for this domain
+    └── reference.md          # Sentence/output templates for this domain
 ```
 
 ---
@@ -85,8 +85,8 @@ One file per deployment scenario. Uses the L1-L5 ladder structure defined in
 `docs/WORLD-LADDER-TEMPLATE.md`. Each scenario describes a real context where you can
 practice this domain under actual pressure.
 
-A domain should have at minimum 2-3 scenarios. The Spanish reference implementation has 5
-(mcdonalds, casa, vecinos, familia, errands).
+A domain should have at minimum 2-3 scenarios. The Spanish reference implementation has 4
+(mcdonalds, casa, vecinos, errands).
 
 ### `reference/*.md`
 
@@ -104,7 +104,7 @@ Examples of reference organization:
 **License note:** Reference content you create is your original educational work. Use CC BY-SA 4.0
 if you publish it. Do not include copyrighted third-party content — summarize or cite instead.
 
-### `chunks/bank.md`
+### `chunks/reference.md`
 
 Production chunks are the minimal units you need to produce under pressure. Not vocabulary lists —
 these are things you can say in a realistic deployment scenario.
@@ -115,7 +115,7 @@ Examples:
 - Spanish: `¿Me lo puede repetir? — Can you repeat that?`
 - Music theory: `The I → IV → V → I progression — basic cadence formula`
 
-### `patterns/bank.md`
+### `patterns/reference.md`
 
 Sentence/output templates showing the structural patterns of the domain. These are fill-in-the-blank
 scaffolds that let you improvise once you have the pattern.
@@ -181,8 +181,8 @@ Before considering a domain "ready to use":
 - [ ] `domain-config.md` complete with all required fields
 - [ ] At least 2 scenarios at L1-L3 in `scenarios/`
 - [ ] At least one reference file in `reference/`
-- [ ] At least 20 production chunks in `chunks/bank.md`
-- [ ] At least 10 sentence patterns in `patterns/bank.md`
+- [ ] At least 20 production chunks in `chunks/reference.md`
+- [ ] At least 10 sentence patterns in `patterns/reference.md`
 - [ ] Registered in `config/paths.yaml`
 - [ ] Runs successfully with `prompts/master.md` (agent can complete a session)
 
@@ -200,7 +200,7 @@ If you want to publish your domain for others to use:
    - Educational reference content (your original material): CC BY-SA 4.0
 3. Write `domain-config.md` with no personal/employer-specific context
 4. Anonymize scenario files — replace your specific contacts with archetypes ("coworker," "client")
-5. Create a blank `chunks/bank.md` template or a starter set of universal chunks
+5. Create a blank `chunks/reference.md` template or a starter set of universal chunks
 6. Publish as a standalone directory or as a PR to a community domain registry
 
 ---

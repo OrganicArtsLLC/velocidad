@@ -6,7 +6,8 @@ Scenario files live in `{domain}/scenarios/` or `worlds/` and define a single re
 deployment context: where you'll practice, what success looks like at each level, and what
 vocabulary/structure is specifically needed for that context.
 
-Name files with a short, memorable slug: `mcdonalds.md`, `client-standup.md`, `job-interview.md`.
+Name each scenario with a short, memorable slug — `mcdonalds`, `client-standup`, `job-interview` —
+as either a flat `{slug}.md` (e.g. in `{domain}/scenarios/`) or a `worlds/{slug}/scenario.md` folder.
 
 ---
 
@@ -178,7 +179,7 @@ errors, or avoidance patterns? Document the failure modes here so the agent can 
 
 ## Example: Spanish — McDonald's Scenario
 
-See `worlds/mcdonalds.md` in this repository for a complete reference example.
+See `worlds/mcdonalds/scenario.md` in this repository for a complete reference example.
 
 ---
 

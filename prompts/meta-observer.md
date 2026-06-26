@@ -11,12 +11,12 @@ Your job: analyze how the learner learns, what's working, what's not, and evolve
 
 Read:
 - All sessions from the past 7 days (sessions/*/friction.json + transcripts)
-- meta/learning-observations.md
+- {learner_data_dir}/meta/learning-observations.md
 - meta/system-changelog.md
 - meta/language-architecture.md
-- config/learner-profile.yaml
-- chunks/bank.md
-- patterns/bank.md
+- {learner_data_dir}/profile.yaml
+- chunks/reference.md
+- patterns/reference.md
 - srs/ (all boxes)
 
 Produce a weekly analysis:

@@ -163,7 +163,7 @@ Some very common verbs change their stem vowel when stressed — which is **ever
 
 **Ser vs Estar (Critical!):**
 - **Ser:** Identity, origin, permanent traits → *Soy [nombre], soy americano*
-- **Estar:** Location, temporary state → *Estoy en Vegas, estoy cansado*
+- **Estar:** Location, temporary state → *Estoy en [tu ciudad], estoy cansado*
 
 🇩🇪 **German speaker:** No equivalent in German/English. Spanish splits "to be" into two verbs.
 

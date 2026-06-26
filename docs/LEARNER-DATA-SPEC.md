@@ -125,7 +125,7 @@ Schema for the post-session friction log. One file per session folder.
 ```json
 {
   "date": "YYYY-MM-DD",
-  "world": "mcdonalds | casa | vecinos | familia | errands",
+  "world": "mcdonalds | casa | vecinos | errands",
   "ladder_level": "L1 | L2 | L3 | L4 | L5",
   "production_gaps": [
     "Things I tried to say but couldn't — describe the scenario, not just the word"
@@ -254,7 +254,6 @@ Weekly velocity scorecard. The only metric that matters: are you speaking more S
 | mcdonalds | L1 | — | 0 |
 | casa | L1 | — | 0 |
 | vecinos | L1 | — | 0 |
-| familia | L1 | — | 0 |
 | errands | L1 | — | 0 |
 ```
 
@@ -331,4 +330,4 @@ When the spec version bumps major, a migration guide will be provided.
 
 ---
 
-*Velocidad-AI Learner Data Spec v1.0.0 — March 2026*
+*Velocidad-AI Learner Data Spec v1.1.0 — April 2026*

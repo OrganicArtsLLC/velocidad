@@ -38,8 +38,9 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 Note on dual licensing
 ======================
 This CONTENT-LICENSE covers the educational content listed above.
-The ENGINE CODE (prompts/, config/, meta/, scripts/) is separately
-licensed under GPL-3.0-or-later. See LICENSE for details.
+The ENGINE & METHODOLOGY (prompts/, config/, meta/, and the methodology
+specifications in docs/) is separately licensed under GPL-3.0-or-later.
+See LICENSE for details.
 
 When in doubt about which license applies to a file:
   - If it is a methodology file (prompts, agent rules, system architecture)  → GPL-3.0

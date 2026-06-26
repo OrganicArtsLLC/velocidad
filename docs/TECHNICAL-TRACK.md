@@ -58,14 +58,14 @@ A technical domain directory follows the same spec as any domain (see `docs/DOMA
 │   ├── architecture-vocab.md  # Terms and patterns for discussing system design
 │   ├── data-models.md         # Vocabulary for representing and explaining data
 │   └── stakeholder-language.md # Vocabulary for translating technical work into business terms
-├── chunks/bank.md             # Production phrases: "the tradeoff here is...", "given that..."
-└── patterns/bank.md           # Sentence templates: "This component [verb] by [mechanism]..."
+├── chunks/reference.md             # Production phrases: "the tradeoff here is...", "given that..."
+└── patterns/reference.md           # Sentence templates: "This component [verb] by [mechanism]..."
 ```
 
 **Keep private:**
 - `scenarios/` files that reference specific coworkers, internal projects, employer-specific tooling
 - `reference/` files synthesized from copyrighted books, internal documentation, or proprietary specs
-- `chunks/bank.md` entries built from real colleague interactions
+- `chunks/reference.md` entries built from real colleague interactions
 - Any content that would identify your employer or expose internal processes
 
 **Safe to publish:**
@@ -152,8 +152,8 @@ generic-technical-domain/
 │   └── design-review.md          # Fill in: L1-L5 ladder for explaining a system design
 ├── reference/
 │   └── core-vocabulary.md        # Fill in: 20-30 terms that come up most in your context
-├── chunks/bank.md                # Start blank; build from sessions
-└── patterns/bank.md              # 5-10 starter patterns; add from sessions
+├── chunks/reference.md                # Start blank; build from sessions
+└── patterns/reference.md              # 5-10 starter patterns; add from sessions
 ```
 
 This template is intentionally empty. Your content fills it. The domain becomes valuable as you

@@ -136,7 +136,7 @@
 
 **Examples:**
 - **Soy** [nombre] (identity)
-- **Estoy** en Vegas (location)
+- **Estoy** en [tu ciudad] (location)
 - **Soy** programador (occupation)
 - **Estoy** cansado (temporary state)
 

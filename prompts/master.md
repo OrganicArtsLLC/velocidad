@@ -17,8 +17,6 @@ Replace {learner_data_dir} with the path in config/paths.yaml (default: ../[your
 
 Today's world: [WORLD — e.g., mcdonalds, casa, vecinos, errands]
 
-Today's world: [WORLD — e.g., mcdonalds, casa, vecinos, errands]
-
 Run this sequence:
 
 ## PHASE 1: Session (10-12 min)

@@ -35,9 +35,9 @@ Bedrock is a byproduct of interaction, not a prerequisite.
 
 ### Depth-First Progression
 
-- **Week 1:** Coffee World (order, clarify, small talk, pay)
-- **Week 2:** Grocery World (find items, ask help, checkout)
-- **Week 3:** Small Talk World (weather, plans, compliments)
+- **Week 1:** McDonald's World (order, clarify, small talk, pay) — the safe lab
+- **Week 2:** Errands World (find items, ask for help, checkout)
+- **Week 3:** Vecinos World (greetings, weather, plans, small talk with neighbors)
 
 Each week goes deep on one scenario. Patterns compound across contexts.
 
@@ -82,63 +82,51 @@ Browse the full index: [language-reference/README.md](language-reference/README.
 ```
 velocidad/
 ├── config/
-│   ├── learner-profile.yaml     # Your context, people, learning style
-│   └── rules-of-immersion.md    # 15 rules the agent must follow
+│   ├── learner-profile-template.yaml  # Profile schema to copy into your data dir
+│   ├── paths.yaml.template            # Points the engine at your private data dir
+│   └── rules-of-immersion.md          # 15 rules the agent must follow
 ├── meta/
-│   ├── language-architecture.md  # Spanish decomposed into 6 layers
-│   ├── learning-observations.md  # What works for you (agent-updated)
-│   └── system-changelog.md       # How the system evolves
+│   ├── language-architecture.md       # Spanish decomposed into 6 layers
+│   ├── memory-techniques.md           # Mnemonics + retention methods
+│   └── system-changelog.md            # How the system evolves
 ├── worlds/
-│   ├── mcdonalds/scenario.md     # The safe lab — ordering, small talk
-│   ├── casa/scenario.md          # House workers — directions, logistics
-│   ├── vecinos/scenario.md       # Neighbor family — real friendship
-│   └── errands/scenario.md       # Local errands — daily deployment
-├── prompts/                       # 6 agent mode prompts (see table above)
-├── sessions/                      # Daily transcripts + friction logs
-│   └── TEMPLATE.md               # Session folder structure
+│   ├── mcdonalds/scenario.md          # The safe lab — ordering, small talk
+│   ├── casa/scenario.md               # House workers — directions, logistics
+│   ├── vecinos/scenario.md            # Neighbors — real friendship
+│   └── errands/scenario.md            # Local errands — daily deployment
+├── prompts/                           # 6 agent mode prompts (see table above)
+├── sessions/                          # Daily transcripts + friction logs
+│   └── TEMPLATE.md                    # Session folder structure
 ├── srs/
-│   ├── box1.md                   # New / just failed (daily review)
-│   ├── box2.md                   # Getting it (every other day)
-│   ├── box3.md                   # Almost owned (every 3 days)
-│   └── box4.md                   # Mastered (weekly)
-├── language-reference/             # 📚 The Living Library (see below)
-│   ├── README.md                  # Library index with reading orders
-│   ├── 00-05                      # System: how Spanish works (6 layers)
-│   ├── 06-core-vocabulary.md      # 1,000 essential words by frequency
-│   ├── 07-cognate-accelerator.md  # 18 suffix rules → 3,000+ words from English
-│   ├── 08-verb-reference.md       # 50 verbs, full conjugation tables
-│   ├── 09-numbers-time-dates.md   # Complete numeric system
-│   ├── 10-prepositions.md         # 20 prepositions + por vs para deep dive
+│   ├── box1.md                        # New / just failed (daily review)
+│   ├── box2.md                        # Getting it (every other day)
+│   ├── box3.md                        # Almost owned (every 3 days)
+│   └── box4.md                        # Mastered (weekly)
+├── language-reference/                # 📚 The Living Library (see below)
+│   ├── README.md                      # Library index with reading orders
+│   ├── 00-05                          # System: how Spanish works (6 layers)
+│   ├── 06-core-vocabulary.md          # 1,000 essential words by frequency
+│   ├── 07-cognate-accelerator.md      # 18 suffix rules → 3,000+ words from English
+│   ├── 08-verb-reference.md           # 50 verbs, full conjugation tables
+│   ├── 09-numbers-time-dates.md       # Complete numeric system
+│   ├── 10-prepositions.md             # 20 prepositions + por vs para deep dive
 │   ├── 11-rapid-acquisition-methods.md  # 18 proven learning methods
-│   ├── 12-cloze-method.md         # Cloze deletion theory + 200 exercises
-│   ├── 13-mnemonic-dictionary.md  # 165+ keyword mnemonics for hard words
-│   ├── 14-ai-reverse-engineering-handbook.md  # Meta-meta: AI X-ray into Spanish as a system
-│   ├── FIELD-MANUAL.md            # Daily deployment reference
-│   └── *.md                       # Visual ref, German bridges, priority order
+│   ├── 12-cloze-method.md             # Cloze deletion theory + 200 exercises
+│   ├── 13-mnemonic-dictionary.md      # 165+ keyword mnemonics for hard words
+│   ├── 14-ai-reverse-engineering-handbook.md  # Meta-meta: AI X-ray into Spanish
+│   ├── FIELD-MANUAL.md                # Daily deployment reference
+│   └── *.md                           # Visual ref, German bridges, priority order
 ├── chunks/
-│   └── reference.md              # Universal phrase reference (engine copy)
+│   └── reference.md                   # Universal phrase reference
 ├── patterns/
-│   └── reference.md              # Universal sentence templates (engine copy)
-├── technical/
-│   ├── library/                  # 92 ingested reference docs + INDEX.md
-│   ├── srs/                      # Technical SRS boxes (41 cards in box1)
-│   ├── domains/                  # 4 domain scenario ladders
-│   ├── chunks/bank.md            # Technical vocabulary bank
-│   ├── patterns/bank.md          # Technical sentence pattern bank
-│   ├── sessions/                 # Technical session records
-│   └── prompts/                  # Technical track prompts
-├── dashboard.py                   # Interactive terminal dashboard (both tracks)
-├── start-dashboard.sh             # Dashboard launcher
-├── requirements.txt               # Python deps (rich)
-├── publish-public.sh              # Orphan clone release script (no history exposed)
+│   └── reference.md                   # Universal sentence templates
 └── docs/
-    ├── KNOWLEDGE-ENGINE-OVERVIEW.md  # What this engine is + the production flywheel
-    ├── DOMAIN-SPEC.md                # How to add a new domain (Spanish, technical, etc.)
-    ├── LEARNER-DATA-SPEC.md          # Learner data directory contract
-    ├── WORLD-LADDER-TEMPLATE.md      # Blank L1-L5 scenario scaffold
-    ├── TECHNICAL-TRACK.md            # Guide for professional vocabulary domains
-    ├── design.md                     # Vision, architecture, implementation
-    └── seed/                         # Original brainstorm archive
+    ├── KNOWLEDGE-ENGINE-OVERVIEW.md   # What this engine is + the production flywheel
+    ├── DOMAIN-SPEC.md                 # How to add a new domain
+    ├── LEARNER-DATA-SPEC.md           # Learner data directory contract
+    ├── WORLD-LADDER-TEMPLATE.md       # Blank L1-L5 scenario scaffold
+    ├── TECHNICAL-TRACK.md             # Guide for professional vocabulary domains
+    └── design.md                      # Vision, architecture, implementation
 ```
 
 > **Your personal sessions, SRS state, mastery tracking, and profile live in a separate
@@ -190,116 +178,17 @@ velocidad/             ← engine (public)
 
 See the [Learner Data Spec](docs/LEARNER-DATA-SPEC.md) for the full directory tree and file schemas.
 
-### Releasing the Engine Publicly
-
-#### Two-remote workflow
-
-The recommended setup uses two remotes:
-
-```
-origin  → your-private-backup-repo   ← VS Code Sync, git push, git pull all go here
-public  → velocidad (public)           ← blocked by pre-push hook; publish via script only
-```
-
-Add the named remote once:
-```bash
-git remote add public https://github.com/OrganicArtsLLC/velocidad.git
-```
-
-#### Three layers of protection
-
-1. **Remote routing** — `origin` points at your private backup. Normal git operations (`push`, `pull`, `fetch`) never touch the public repo.
-2. **Pre-push hook** — `.git/hooks/pre-push` hard-blocks any direct `git push` to the public repo URL — including VS Code's Sync button. Attempting it prints an error and exits.
-3. **Verification scan** — `./publish-public.sh` scans the build snapshot for personal data patterns before committing. If anything leaks through, the publish aborts and the build dir is removed.
-
-#### Installing the pre-push hook
-
-```bash
-cat > .git/hooks/pre-push << 'EOF'
-#!/usr/bin/env bash
-PUBLIC_URL="https://github.com/OrganicArtsLLC/velocidad.git"
-PUBLIC_SSH="git@github.com:OrganicArtsLLC/velocidad.git"
-PUSH_URL="$2"
-if [[ "$PUSH_URL" == "$PUBLIC_URL" || "$PUSH_URL" == "$PUBLIC_SSH" ]]; then
-  echo "✗ BLOCKED: Direct push to the public repo is not allowed."
-  echo "  Use: ./publish-public.sh"
-  echo "  The script creates a clean orphan commit with no history."
-  exit 1
-fi
-EOF
-chmod +x .git/hooks/pre-push
-```
-
-#### Publishing a release
-
-```bash
-./publish-public.sh
-./publish-public.sh "feat: add three new cloze exercises"   # custom commit message
-```
-
-This creates an orphan clone — a fresh git repository with a single flat commit containing only engine files. Your private history stays local. The public repo shows no history of personal data, SRS state, or profile iterations. Run it anytime to update the public release.
-
 ---
 
-## Technical Track
+## Beyond Spanish
 
-Parallel to the Spanish engine, a **professional fluency track** for software engineering, DevOps, AI tooling, and Python.
+The same engine generalizes to any domain where skill is built under pressure — professional and
+technical vocabulary, public speaking, music performance, negotiation. The flywheel, SRS, friction
+log, and L1-L5 ladder are domain-agnostic; only the scenarios and reference content change.
 
-The same mechanics — SRS, chunks, patterns, domain scenarios — applied to the vocabulary you need to be authoritative in architecture discussions, code reviews, and platform work.
-
-### Technical Domains
-
-| Domain | Purpose | Scenario Ladder |
-|--------|---------|----------------|
-| **Software Engineering** | Code review, ADRs, design patterns, design discussions | L1 Pattern Recognition → L4 Design Docs |
-| **DevOps & Platform** | platform tooling, pipelines, baseline/drift language | L1 Core Concepts → L5 Institutional Authority |
-| **AI Tooling** | Agent mode, prompting, RAG, failure diagnosis | L1 Single-Turn → L4 System Design |
-| **Python & Data** | Typed Python, testable code, data pipelines | L1 Typed Functions → L4 Production Systems |
-
-### Technical Engine Layout
-
-```
-technical/
-├── library/
-│   ├── foundations/         # 60 foundational SE/DevOps/Systems texts
-│   ├── ai-ml/              # 19 AI/ML reference docs
-│   ├── books/              # 13 key books (DDIA, DevOps Handbook, etc.)
-│   └── INDEX.md            # 92-document catalog with priorities + reading paths
-├── srs/
-│   ├── box1.md             # 41 cards across all 4 domains (daily review)
-│   ├── box2.md             # Getting it (every other day)
-│   ├── box3.md             # Almost owned (every 3 days)
-│   └── box4.md             # Mastered (weekly)
-├── domains/
-│   ├── ai-tooling/scenario.md
-│   ├── devops-platform/scenario.md
-│   ├── python-data/scenario.md
-│   └── software-engineering/scenario.md
-├── chunks/bank.md          # Technical term bank
-├── patterns/bank.md        # Sentence templates for technical language
-├── sessions/
-│   └── TEMPLATE.md         # Session folder: plan / transcript / friction / debrief
-└── prompts/                # Technical track agent prompts
-    ├── master.md
-    ├── distiller.md
-    ├── srs-generator.md
-    └── meta-observer.md
-```
-
-### Interactive Dashboard
-
-Both tracks are navigable from a single terminal dashboard:
-
-```bash
-./start-dashboard.sh
-```
-
-- SRS review with grading and automatic card promotion between boxes
-- Library browser (92 docs, reading paths, opens PDFs in system viewer)
-- Chunk and pattern browsers for both tracks
-- Session launcher with domain + level selection
-
-Requires: `pip install rich`
+- [`docs/KNOWLEDGE-ENGINE-OVERVIEW.md`](docs/KNOWLEDGE-ENGINE-OVERVIEW.md) — what the engine is and which domains fit
+- [`docs/DOMAIN-SPEC.md`](docs/DOMAIN-SPEC.md) — how to build a new domain that plugs into the engine
+- [`docs/TECHNICAL-TRACK.md`](docs/TECHNICAL-TRACK.md) — worked guide for professional / technical vocabulary domains
 
 ---
 
@@ -314,10 +203,11 @@ Requires: `pip install rich`
 
 ## Documentation
 
+- [Knowledge Engine Overview](docs/KNOWLEDGE-ENGINE-OVERVIEW.md) — What the engine is and how the flywheel works
 - [Language Reference Library](language-reference/README.md) — Complete index of all reference material with reading orders
 - [Learner Data Spec](docs/LEARNER-DATA-SPEC.md) — The contract between engine and personal data directory
+- [Domain Spec](docs/DOMAIN-SPEC.md) — How to add a new domain to the engine
 - [Design Document](docs/design.md) — Vision, architecture, ideas, implementation plan
-- [Seed Conversation](docs/seed/chatgpt-seed-conversation.md) — Original brainstorm that spawned this project
 
 ---
 

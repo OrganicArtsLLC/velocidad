@@ -74,10 +74,10 @@ Level: [L1-L5]
 2.
 3.
 
-## Chunks to Harden (add to chunks/bank.md)
+## Chunks to Harden (add to chunks/reference.md)
 
 
-## Patterns Extracted (add to patterns/bank.md)
+## Patterns Extracted (add to patterns/reference.md)
 
 
 ## Deploy Report

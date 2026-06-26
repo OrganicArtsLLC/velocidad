@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Velocidad — single entry point for the multi-study learning engine.
+# Usage: ./velocidad [--study NAME] <start|srs|daily|recall|add|stats|coach|finish|prompt|status>
+# Run ./velocidad --help for the full command list.
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+exec python3 "$SCRIPT_DIR/scripts/velocidad.py" "$@"

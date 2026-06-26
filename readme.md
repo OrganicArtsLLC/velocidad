@@ -93,7 +93,10 @@ velocidad/
 │   └── rules-of-immersion.md          # The rules the agent must follow
 ├── meta/
 │   └── system-changelog.md            # How the engine itself evolves
-├── scripts/                           # The velocidad CLI (coming in the next stage)
+├── velocidad                          # CLI launcher → ./velocidad <command>
+├── scripts/
+│   ├── velocidad.py                   # The engine CLI (SRS, daily review, stats, coach)
+│   └── speak.py                       # Optional voice layer (drill/listen by ear)
 ├── docs/                              # Engine methodology + specs (see Documentation)
 │   ├── KNOWLEDGE-ENGINE-OVERVIEW.md   # What this engine is + the production flywheel
 │   ├── STUDY-SPEC.md                  # How to add a new study
@@ -134,13 +137,19 @@ cp config/paths.yaml.template config/paths.yaml
 #    Example: ../[your-private-repo]/velocidad
 #    See docs/LEARNER-DATA-SPEC.md for what that directory needs to contain.
 
-# 3. Open VS Code with agent mode (or any Claude/GPT interface)
-# 4. Paste the contents of spanish/prompts/master.md into the agent
-# 5. Tell it which scenario to run (e.g., "Today's scenario: mcdonalds")
-# 6. Do the session. The agent handles everything else.
+# 3. Run the engine (no dependencies — Python 3.10+ standard library only)
+./velocidad start                 # morning routine: surfaces today's prompt + due cards
+./velocidad status                # dashboard across all studies
+./velocidad --help                # every command
+
+# The CLI does the mechanical work (SRS review, session scaffolding, surfacing the
+# master prompt). Agent mode does the learning: paste the prompt it shows you into
+# Claude/GPT, tell it the scenario (e.g. "Today's scenario: mcdonalds"), and go.
 ```
 
-**First time?** `docs/LEARNER-DATA-SPEC.md` has the initialization checklist — seven files to create, takes about ten minutes. `docs/USER-GUIDE.md` walks through a full day and week.
+You can also skip the CLI and paste `spanish/prompts/master.md` into the agent directly.
+
+**First time?** `docs/USER-GUIDE.md` walks through a full day and week. `docs/LEARNER-DATA-SPEC.md` has the learner-data initialization checklist.
 
 ## Architecture
 

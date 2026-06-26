@@ -1,0 +1,7 @@
+# Velocidad CLI — no third-party dependencies.
+#
+# The engine (scripts/velocidad.py) and the voice layer (scripts/speak.py) use only
+# the Python 3.10+ standard library. There is nothing to install — just run ./velocidad.
+#
+# The optional voice layer's premium narration uses ElevenLabs via the standard-library
+# urllib if you set ELEVENLABS_API_KEY; macOS `say` is the default and needs nothing.

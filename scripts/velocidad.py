@@ -132,13 +132,17 @@ FRICTION_PHILOSOPHY = ["production_gaps", "comprehension_gaps", "recurring_error
 
 # Studies are directory plugins (see docs/adr/0002-study-plugin-architecture.md). Each entry
 # points at a top-level study directory. Spanish is the reference study; register additional
-# studies here as you add their directories (e.g. a `philosophy/` study — PHILOSOPHY_DRILL and
-# FRICTION_PHILOSOPHY above are ready to wire in).
+# studies here as you add their directories.
 STUDIES: dict[str, Study] = {
     "spanish": Study(
         name="spanish", display="Spanish", root=ROOT / "spanish", srs_format="plain",
         friction_keys=FRICTION_SPANISH, blitz_segments=SPANISH_BLITZ,
         blitz_label="5-MINUTE BLITZ", greeting="Buenos días",
+    ),
+    "philosophy": Study(
+        name="philosophy", display="Philosophy & Discourse", root=ROOT / "philosophy",
+        srs_format="bold", friction_keys=FRICTION_PHILOSOPHY, blitz_segments=PHILOSOPHY_DRILL,
+        blitz_label="ARGUMENT DRILL",
     ),
 }
 DEFAULT_STUDY = "spanish"

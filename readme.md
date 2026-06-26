@@ -83,7 +83,7 @@ Browse the full index: [spanish/language-reference/README.md](spanish/language-r
 ## Project Structure
 
 The repo root is a generic **engine**; each **study** is a directory that plugs into it.
-Spanish ships today as the reference study; Philosophy and Distributed Systems are on the way.
+Spanish is the reference study (runnable via the CLI); a Philosophy & Discourse study and a Distributed Systems codex ship alongside it.
 
 ```
 velocidad/
@@ -120,8 +120,8 @@ velocidad/
 │   ├── chunks/reference.md            # Universal phrase reference
 │   ├── patterns/reference.md          # Universal sentence templates
 │   └── meta/                          # language-architecture.md, memory-techniques.md
-├── philosophy/                        # 🏛️ Philosophy study (coming)
-└── distributed-systems/               # 💻 Distributed Systems study (coming)
+├── philosophy/                        # 🏛️ Philosophy & Discourse study (CLI-registered)
+└── distributed-systems/               # 💻 Distributed Systems codex (principles + case studies)
 ```
 
 > **Your personal sessions, SRS state, mastery tracking, and profile live in a separate
@@ -186,7 +186,7 @@ See the [Learner Data Spec](docs/LEARNER-DATA-SPEC.md) for the full directory tr
 The same engine generalizes to any **study** where skill is built under pressure — professional and
 technical fluency, philosophy and discourse, public speaking, negotiation. The flywheel, SRS,
 friction log, and L1-L5 ladder are study-agnostic; only the scenarios and reference content change.
-Spanish is the reference study; **Philosophy** and **Distributed Systems** studies are coming.
+Spanish is the reference study; a **Philosophy & Discourse** study and a **Distributed Systems** codex ship alongside it as worked examples of the same engine.
 
 - [`docs/KNOWLEDGE-ENGINE-OVERVIEW.md`](docs/KNOWLEDGE-ENGINE-OVERVIEW.md) — what the engine is and which studies fit
 - [`docs/STUDY-SPEC.md`](docs/STUDY-SPEC.md) — how to build a new study that plugs into the engine

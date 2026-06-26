@@ -1,0 +1,67 @@
+# Velocidad-AI: Learner Profile Template
+#
+# Copy this file to your learner data directory as profile.yaml
+# and fill in every section honestly. The more specific, the better
+# the agent can personalize your sessions.
+#
+# See docs/LEARNER-DATA-SPEC.md for the full schema.
+
+name: "[your name]"
+
+# --- Current Level ---
+level:
+  self_assessment: "brief honest description"
+  can_do:
+    - "list specific things you can currently do"
+  cannot_yet:
+    - "list specific things you can't do yet"
+
+# --- Why Spanish (Emotional Fuel) ---
+# Be specific — vague motivation fades. Real people and real stakes persist.
+motivation:
+  primary: "The real reason, not the polite version"
+  emotional_anchors:
+    - "Person 1: who they are and why connecting with them in Spanish matters"
+    - "Person 2: ..."
+  identity_shift: "I am someone who [does this], not someone who is learning to [do this]"
+
+# --- Real People You Will Practice With ---
+# These become your deployment targets. Name them — specificity creates accountability.
+deployment_targets:
+  - name: "Name or role"
+    context: "Where and how you interact"
+    stakes: low  # low | medium | high
+    frequency: "how often"
+    scenario_type: "what kind of interaction"
+
+# --- How You Learn ---
+learning_style:
+  strengths:
+    - "how you absorb and retain best"
+  watch_outs:
+    - "habits that slow your progress"
+  accelerators:
+    - "techniques that have worked for you in other domains"
+
+# --- Current World Progression ---
+current_worlds:
+  - world: "mcdonalds"
+    level: L1
+    last_session: ~
+    deploy_count: 0
+  - world: "casa"
+    level: L1
+    last_session: ~
+    deploy_count: 0
+  - world: "vecinos"
+    level: L1
+    last_session: ~
+    deploy_count: 0
+  - world: "familia"
+    level: L1
+    last_session: ~
+    deploy_count: 0
+  - world: "errands"
+    level: L1
+    last_session: ~
+    deploy_count: 0

@@ -1,0 +1,37 @@
+# Velocidad-AI .gitignore
+#
+# Personal learner data stays in your private repo.
+# This engine repo should never contain personal session data.
+
+# Personal path configuration (points to your learner data directory)
+config/paths.yaml
+
+# If someone accidentally creates personal data in this repo
+sessions/2*/
+srs/box*.md
+srs/.last-review.json
+progress/
+meta/learning-observations.md
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.env
+
+# Editor
+.DS_Store
+.vscode/
+*.swp
+
+# Agent instructions (local-only, not published)
+CLAUDE.md
+.github/copilot-instructions.md
+MAINTAINER.md
+publish-public.sh
+
+# Technical library — PDFs, EPUBs, and other large binaries are local only.
+# The INDEX.md catalog IS committed. The actual files are not.
+technical/library/foundations/
+technical/library/ai-ml/
+technical/library/books/

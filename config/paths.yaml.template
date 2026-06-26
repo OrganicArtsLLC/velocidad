@@ -1,0 +1,36 @@
+# Velocidad-AI: Path Configuration Template
+#
+# Copy this file to config/paths.yaml and set your learner data directory.
+# config/paths.yaml is gitignored — it stays local to your machine.
+#
+# Your learner data directory must implement the spec in:
+#   docs/LEARNER-DATA-SPEC.md
+#
+# Can be relative (from this repo root) or absolute.
+
+# Examples:
+#   learner_data_dir: "../sibling-repo/velocidad"      # sibling repo (separate private repo)
+#   learner_data_dir: "~/personal/my-spanish-data"      # absolute path
+#   learner_data_dir: "./my-data"                        # subdirectory (gitignored)
+
+learner_data_dir: "../your-life-repo/velocidad"
+
+# ── Domain configuration ─────────────────────────────────────────────────────
+# Velocidad supports multiple learning domains (Spanish, technical vocabulary, etc.)
+# Each domain is a directory that implements the structure in docs/DOMAIN-SPEC.md.
+#
+# The first domain in the list is the default when the dashboard launches.
+# Use "." as the path if the domain data lives directly in learner_data_dir.
+# Use a sibling-repo path for private domain data you keep in a separate repo.
+#
+# Examples:
+#   path: "."                               # Spanish track lives in learner_data_dir root
+#   path: "../work-private/technical"       # Technical track in a separate private repo
+
+domains:
+  - name: spanish
+    display: "\U0001F1EA\U0001F1F8 Spanish"
+    path: "."
+  - name: your-domain
+    display: "\U0001F4DA Your Domain"
+    path: "../your-private-repo/your-domain-data"

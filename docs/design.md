@@ -88,9 +88,9 @@ What we **don't** build: dashboards, progress trees, gamification, curriculum pl
 One main scenario per week, deep. Light maintenance of previous scenarios.
 
 ```
-Week 1: McDonald's World     (order, clarify, small talk, pay, handle mistakes)
-Week 2: Errands World        (find items, ask help, checkout) + mcdonalds maintenance
-Week 3: Vecinos World        (greetings, weather, plans) + previous maintenance
+Week 1: McDonald's scenario  (order, clarify, small talk, pay, handle mistakes)
+Week 2: Errands scenario     (find items, ask help, checkout) + mcdonalds maintenance
+Week 3: Vecinos scenario     (greetings, weather, plans) + previous maintenance
 Week 4+: Scenarios stack     (patterns compound across contexts)
 ```
 
@@ -217,11 +217,11 @@ These are what separate "knows words" from "can converse."
 
 ### MVP Scope (Build This First)
 
-**Four worlds:**
-- `worlds/mcdonalds/` — the safe lab
-- `worlds/casa/` — house workers
-- `worlds/vecinos/` — neighbors
-- `worlds/errands/` — daily errands
+**Four scenarios (in `spanish/scenarios/`):**
+- `spanish/scenarios/mcdonalds/` — the safe lab
+- `spanish/scenarios/casa/` — house workers
+- `spanish/scenarios/vecinos/` — neighbors
+- `spanish/scenarios/errands/` — daily errands
 
 **1 shared system:**
 - friction log → SRS generation → next session drills
@@ -256,29 +256,30 @@ velocidad/
 │   ├── learner-profile-template.yaml  # Profile schema to copy into your data dir
 │   ├── paths.yaml.template          # Points the engine at your private data dir
 │   └── rules-of-immersion.md        # Agent behavior constraints
-├── worlds/
-│   ├── mcdonalds/scenario.md        # Ladder + NPC lines
-│   ├── casa/scenario.md
-│   ├── vecinos/scenario.md
-│   └── errands/scenario.md
-├── sessions/
-│   └── TEMPLATE.md                  # Session folder structure (lives in learner data dir)
-├── srs/
-│   ├── box1.md                      # Review today
-│   ├── box2.md                      # Review in 2 days
-│   ├── box3.md                      # Review in 7 days
-│   └── box4.md                      # Review in 21 days
-├── chunks/
-│   └── reference.md                 # Universal phrase reference
-├── patterns/
-│   └── reference.md                 # Universal sentence templates
-└── prompts/
-    ├── master.md                    # All-in-one daily prompt
-    ├── session-runner.md            # Roleplay prompt
-    ├── distiller.md                 # Friction extraction prompt
-    ├── srs-generator.md             # Card generation prompt
-    ├── session-planner.md           # Tomorrow planner prompt
-    └── meta-observer.md             # Weekly system review prompt
+└── spanish/                         # The Spanish study (first / reference study)
+    ├── scenarios/
+    │   ├── mcdonalds/scenario.md    # Ladder + NPC lines
+    │   ├── casa/scenario.md
+    │   ├── vecinos/scenario.md
+    │   └── errands/scenario.md
+    ├── sessions/
+    │   └── TEMPLATE.md              # Session folder structure (lives in learner data dir)
+    ├── srs/
+    │   ├── box1.md                  # Review today
+    │   ├── box2.md                  # Review in 2 days
+    │   ├── box3.md                  # Review in 7 days
+    │   └── box4.md                  # Review in 21 days
+    ├── chunks/
+    │   └── reference.md             # Universal phrase reference
+    ├── patterns/
+    │   └── reference.md             # Universal sentence templates
+    └── prompts/
+        ├── master.md                # All-in-one daily prompt
+        ├── session-runner.md        # Roleplay prompt
+        ├── distiller.md             # Friction extraction prompt
+        ├── srs-generator.md         # Card generation prompt
+        ├── session-planner.md       # Tomorrow planner prompt
+        └── meta-observer.md         # Weekly system review prompt
 ```
 
 Personal sessions, SRS state, and profile live in a separate private learner-data directory
@@ -287,7 +288,7 @@ Personal sessions, SRS state, and profile live in a separate private learner-dat
 ### What to Build, In Order
 
 1. **Config files** — learner profile + immersion rules
-2. **First world (mcdonalds)** — scenario ladder with NPC lines
+2. **First scenario (mcdonalds)** — scenario ladder with NPC lines
 3. **Prompts** — the daily loop prompts + master prompt
 4. **Session template** — empty session folder structure
 5. **SRS skeleton** — empty box files with instructions

@@ -6,34 +6,34 @@
 
 ---
 
-## Domain-Agnostic Note
+## Study-Agnostic Note
 
-This specification applies to **any learning domain**, not only Spanish.
+This specification applies to **any study**, not only Spanish.
 
-The Velocidad-AI engine is a production-first fluency methodology that works for any domain where
+The Velocidad-AI engine is a production-first fluency methodology that works for any study where
 you need to perform under pressure — foreign language, technical vocabulary, professional register,
-communication skills. Each domain lives in its own directory and implements this contract.
+communication skills. Each study lives in its own directory and implements this contract.
 
-Multiple domain directories can coexist:
+Multiple study directories can coexist:
 ```
 [your-private-repo]/
-  velocidad/            # Spanish track (implements this spec)
-  velocidad-technical/  # Technical track (implements this spec in a separate dir)
+  velocidad/            # Spanish study (implements this spec)
+  velocidad-technical/  # a technical study (implements this spec in a separate dir)
 ```
 
-The `config/paths.yaml` file maps domain names to directory paths. See `docs/DOMAIN-SPEC.md` for
-the full domain structure specification.
+The `config/paths.yaml` file maps study names to directory paths. See `docs/STUDY-SPEC.md` for
+the full study structure specification.
 
-The rest of this document uses the Spanish track as the **reference implementation example**.
-All field names, file names, and examples are the Spanish-track version. When building a different
-domain, substitute your domain's vocabulary, deployment contexts, and scenario files accordingly.
+The rest of this document uses the Spanish study as the **reference implementation example**.
+All field names, file names, and examples are the Spanish version. When building a different
+study, substitute your study's vocabulary, deployment contexts, and scenario files accordingly.
 
 ---
 
 ## Overview
 
 The Velocidad-AI engine (this repository) is stateless with respect to your personal data. It
-contains methodology, prompts, worlds, and universal reference content — but nothing about you.
+contains methodology, prompts, scenarios, and universal reference content — but nothing about you.
 
 Your personal data lives in a directory that **implements this spec**. The engine reads from it; your
 progress accumulates in it. The two grow independently.
@@ -54,7 +54,7 @@ progress accumulates in it. The two grow independently.
 ├── profile.yaml                     # Who you are (follows profile schema below)
 ├── sessions/                        # WORM — never modify past sessions
 │   ├── YYYY-MM-DD/                  # One folder per session day
-│   │   ├── plan.md                  # Pre-session: world, level, focus, warmup
+│   │   ├── plan.md                  # Pre-session: scenario, level, focus, warmup
 │   │   ├── transcript.md            # During: full roleplay in Spanish
 │   │   ├── friction.json            # Post: what broke (schema below)
 │   │   └── debrief.md               # Post: corrections, chunks, patterns, next plan
@@ -109,8 +109,8 @@ learning_style:
   accelerators:
     - "techniques that work for you specifically"
 
-current_worlds:
-  - world: "mcdonalds"
+current_scenarios:
+  - scenario: "mcdonalds"
     level: L1
     last_session: "YYYY-MM-DD"
     deploy_count: 0
@@ -125,7 +125,7 @@ Schema for the post-session friction log. One file per session folder.
 ```json
 {
   "date": "YYYY-MM-DD",
-  "world": "mcdonalds | casa | vecinos | errands",
+  "scenario": "mcdonalds | casa | vecinos | errands",
   "ladder_level": "L1 | L2 | L3 | L4 | L5",
   "production_gaps": [
     "Things I tried to say but couldn't — describe the scenario, not just the word"
@@ -154,7 +154,7 @@ Each SRS box file holds cards in this format. Cards progress Box 1 → 4. Fail =
 ```markdown
 ---
 Type: prod | comp | transform | variation | repair
-Tags: [world, level, topic]
+Tags: [scenario, level, topic]
 Front: [Production prompt in English] or [Comprehension prompt in Spanish]
 Back: [Expected Spanish production] or [English meaning]
 Box: 1
@@ -179,13 +179,13 @@ Note: optional context or common error
 
 ### `progress/chunks.md`
 
-Tracks which universal chunks (from `chunks/reference.md` in the engine) you've mastered.
+Tracks which universal chunks (from `spanish/chunks/reference.md` in the engine) you've mastered.
 Use the same symbol system as the reference file.
 
 ```markdown
 # My Chunk Mastery
 
-References: {engine_path}/chunks/reference.md
+References: {engine_path}/spanish/chunks/reference.md
 
 ## Mastered — Box 4
 Chunks you own completely. No hesitation in production or comprehension.
@@ -209,12 +209,12 @@ Chunks identified to learn next. Add from reference as you're ready.
 
 ### `progress/patterns.md`
 
-Tracks which universal patterns (from `patterns/reference.md`) you've internalized.
+Tracks which universal patterns (from `spanish/patterns/reference.md`) you've internalized.
 
 ```markdown
 # My Pattern Mastery
 
-References: {engine_path}/patterns/reference.md
+References: {engine_path}/spanish/patterns/reference.md
 
 ## Mastered ✓
 Can generate 5+ variants without hesitation.
@@ -247,9 +247,9 @@ Weekly velocity scorecard. The only metric that matters: are you speaking more S
 |------|----------|---------|--------------|----------------|-------------|-------|
 | YYYY-WNN | 0 | 0 | 0 | 0 | 0 | |
 
-## World Level Progression
+## Scenario Level Progression
 
-| World | Current Level | Last Session | Deploy Count |
+| Scenario | Current Level | Last Session | Deploy Count |
 |-------|---------------|--------------|--------------|
 | mcdonalds | L1 | — | 0 |
 | casa | L1 | — | 0 |
@@ -312,9 +312,9 @@ Setting up a new learner data directory:
 
 - [ ] Create directory structure from the tree above
 - [ ] Fill in `profile.yaml` — be specific about deployment targets and emotional anchors
-- [ ] Copy blank SRS box templates from `sessions/TEMPLATE.md`
+- [ ] Copy blank SRS box templates from `spanish/sessions/TEMPLATE.md`
 - [ ] Set `config/paths.yaml` in the engine to point to your directory
-- [ ] Run your first session with `prompts/session-runner.md`
+- [ ] Run your first session with `spanish/prompts/session-runner.md`
 - [ ] Write your first `meta/learning-observations.md` entry after the session
 
 ---

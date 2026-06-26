@@ -1,23 +1,40 @@
 # Velocidad: Knowledge Engine Overview
 
-**Version:** 1.0.0
+**Version:** 2.0.0
 **Status:** Active
 
 ---
 
 ## What This Engine Is
 
-Velocidad is a **production-first fluency engine** for any domain where skill is built under pressure.
+Velocidad is a **production-first learning engine** that hosts an open-ended number of **studies** —
+subjects you pursue, in coordination with real work and real stakes, by performing under pressure
+before you feel ready.
 
-The premise: in most skill domains, there is a gap between *knowing* something and *executing it under
+It began as a Spanish-fluency engine. The methodology generalized: the same flywheel that turns
+conversational failure into Spanish fluency turns whiteboard fumbling into technical authority, and
+turns half-formed opinions into rigorous argument. So Spanish became the **first study**, not the
+whole product.
+
+The premise: in most subjects there is a gap between *knowing* something and *executing it under
 real conditions*. You can know 2,000 Spanish words and freeze in a conversation. You can study system
-architecture for a year and fumble through a whiteboard interview. You can practice a piece of music
-at home and lose it on stage.
+architecture for a year and fumble through a whiteboard interview. You can have read Aristotle and
+still lose the argument because you can't deploy the position aloud.
 
 The gap is not knowledge. The gap is **production under pressure** — and it closes only through
-deliberate exposure to the conditions that activate it.
+deliberate exposure to the conditions that activate it. Velocidad uses an AI agent to simulate those
+conditions before you face them in the real world.
 
-Velocidad uses an AI agent to simulate those conditions before you face them in the real world.
+### The Studies
+
+| Study | Status | What it builds |
+|-------|--------|----------------|
+| **Spanish** | First / reference study (`spanish/`) | Conversational Spanish with the real people in your life |
+| **Philosophy** | Planned (`philosophy/`) | Rhetoric, argument, and the positions of the great thinkers — Plato, Aristotle, Cicero, Seneca, Marcus Aurelius, Descartes, Schopenhauer — argued aloud |
+| **Distributed Systems** | Planned (`distributed-systems/`) | Professional/technical fluency — system design, architecture, and the language of the field, performed under pressure |
+
+Every study runs the identical engine below. `docs/STUDY-SPEC.md` is the contract a new study
+satisfies; this document explains the mechanism they share.
 
 ---
 
@@ -94,7 +111,7 @@ The AI agent serves as:
 
 The agent does not lecture. It creates pressure, observes what breaks, and helps you close the gaps.
 
-Six prompts cover the full workflow:
+Six prompts cover the full workflow (per study, in `<study>/prompts/`):
 - `master.md` — Complete engine (use this daily)
 - `session-runner.md` — Scenario roleplay only
 - `distiller.md` — Extract friction from session transcript
@@ -104,9 +121,9 @@ Six prompts cover the full workflow:
 
 ---
 
-## Applicable Domains
+## What Makes a Good Study
 
-The engine requires three things from a domain to work:
+The engine requires three things from a subject for it to work as a study:
 
 1. **Production under pressure can be simulated.** The AI agent can credibly play a scenario
    partner, evaluator, or interviewer who creates realistic pressure.
@@ -116,18 +133,18 @@ The engine requires three things from a domain to work:
 
 3. **Repetition closes gaps.** The skill builds through deliberate practice, not just exposure.
 
-Domains that satisfy these criteria:
+Subjects that satisfy these criteria — the candidate study backlog:
 
-- **Language learning** (current reference implementation: Spanish)
-- **Professional vocabulary** (technical interviews, product reviews, stakeholder meetings)
-- **Music performance** (sight-reading, improvisation, performance anxiety)
+- **Language learning** (the reference study: Spanish)
+- **Philosophy & discourse** (rhetoric, argument, the positions of the greats)
+- **Professional / technical fluency** (interviews, design reviews, stakeholder meetings)
 - **Public speaking** (structuring arguments, managing nerves on delivery)
 - **Sales and negotiation** (objection handling, framing)
 - **Leadership and communication** (difficult conversations, institutional language)
-- **Medical and legal vocabulary** (professional communication under time pressure)
+- **Music performance** (sight-reading, improvisation, performance anxiety)
 
-The Spanish track is the reference implementation. The `docs/DOMAIN-SPEC.md` defines how to build
-a new domain that plugs into the same engine.
+The Spanish study is the reference implementation. `docs/STUDY-SPEC.md` defines how to build a new
+study that plugs into the same engine.
 
 ---
 
@@ -135,39 +152,42 @@ a new domain that plugs into the same engine.
 
 The engine is separated from personal data by design. What lives here:
 
-- **Engine prompts:** `prompts/` — the methodology (6 prompts, GPL-3.0)
-- **Reference domain (Spanish):** `worlds/`, `language-reference/`, `chunks/reference.md`,
-  `patterns/reference.md` — the reference implementation (CC BY-SA 4.0)
+- **Engine prompts:** `spanish/prompts/` (and a `prompts/` directory per future study) — the
+  methodology (GPL-3.0)
+- **Reference study (Spanish):** `spanish/scenarios/`, `spanish/language-reference/`,
+  `spanish/chunks/reference.md`, `spanish/patterns/reference.md` — the reference implementation
+  (CC BY-SA 4.0)
+- **Additional studies:** `philosophy/` and `distributed-systems/` (planned)
 - **Config templates:** `config/` — path configuration and learner profile templates
-- **Domain spec:** `docs/DOMAIN-SPEC.md` — how to add a new domain
+- **Study spec:** `docs/STUDY-SPEC.md` — how to add a new study
 - **Learner data spec:** `docs/LEARNER-DATA-SPEC.md` — what your private data directory must contain
 
 What lives in your private data directory (never in this repo):
 
 - Your sessions, SRS cards, profile, mastery tracking
-- Any domain with personal/employer context
+- Any study with personal/employer context
 - Any reference material that is not your original work
 
 See `docs/LEARNER-DATA-SPEC.md` for the full spec.
 
 ---
 
-## Adding a Domain
+## Adding a Study
 
-1. Read `docs/DOMAIN-SPEC.md`
-2. Create the required directory structure in your private data directory (or a separate repo)
-3. Register it in `config/paths.yaml` under `domains:`
-4. Run `prompts/master.md` and tell the agent which domain to use
+1. Read `docs/STUDY-SPEC.md`
+2. Create the required directory structure (a top-level dir in this repo, or your private data repo)
+3. Register it in `config/paths.yaml` under `studies:`
+4. Run the master prompt and tell the agent which study + scenario to use
 
-The domain doesn't need to be complete to be useful. Start with one scenario at L1.
+The study doesn't need to be complete to be useful. Start with one scenario at L1.
 
 ---
 
 ## License
 
 The Velocidad engine and this document: **GPL-3.0-or-later**
-Reference domain content (Spanish): **CC BY-SA 4.0** (see `CONTENT-LICENSE`)
+Reference study content (Spanish, and other original educational material): **CC BY-SA 4.0** (see `CONTENT-LICENSE`)
 
 ---
 
-*Last Updated: April 10, 2026*
+*Last Updated: June 2026*

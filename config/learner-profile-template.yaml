@@ -43,25 +43,25 @@ learning_style:
   accelerators:
     - "techniques that have worked for you in other domains"
 
-# --- Current World Progression ---
-current_worlds:
-  - world: "mcdonalds"
+# --- Current Scenario Progression ---
+current_scenarios:
+  - scenario: "mcdonalds"
     level: L1
     last_session: ~
     deploy_count: 0
-  - world: "casa"
+  - scenario: "casa"
     level: L1
     last_session: ~
     deploy_count: 0
-  - world: "vecinos"
+  - scenario: "vecinos"
     level: L1
     last_session: ~
     deploy_count: 0
-  - world: "familia"
+  - scenario: "familia"
     level: L1
     last_session: ~
     deploy_count: 0
-  - world: "errands"
+  - scenario: "errands"
     level: L1
     last_session: ~
     deploy_count: 0

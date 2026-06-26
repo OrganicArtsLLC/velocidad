@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/license-CONTENT--LICENSE-blue)](CONTENT-LICENSE)
 [![Author](https://img.shields.io/badge/by-Joshua%20Ayson-black)](https://joshuaayson.com/projects/)
 
-**An antifragile Spanish fluency engine powered by agent mode.**
+**An antifragile learning engine powered by agent mode — starting with Spanish fluency.**
 
 Speak first. Fail. Log what broke. Drill the friction. Speak again.
 
@@ -14,6 +14,9 @@ Speak first. Fail. Log what broke. Drill the friction. Speak again.
 Speed to conversational Spanish comes from **production pressure**, not comprehension study.
 
 > Fluency = Retrieval under pressure + Pattern recognition + Motor memory
+
+The same flywheel generalizes: Spanish is the **first study**, not the whole product. See
+[Beyond Spanish](#beyond-spanish).
 
 ## How It Works
 
@@ -35,9 +38,9 @@ Bedrock is a byproduct of interaction, not a prerequisite.
 
 ### Depth-First Progression
 
-- **Week 1:** McDonald's World (order, clarify, small talk, pay) — the safe lab
-- **Week 2:** Errands World (find items, ask for help, checkout)
-- **Week 3:** Vecinos World (greetings, weather, plans, small talk with neighbors)
+- **Week 1:** McDonald's scenario (order, clarify, small talk, pay) — the safe lab
+- **Week 2:** Errands scenario (find items, ask for help, checkout)
+- **Week 3:** Vecinos scenario (greetings, weather, plans, small talk with neighbors)
 
 Each week goes deep on one scenario. Patterns compound across contexts.
 
@@ -45,18 +48,18 @@ Each week goes deep on one scenario. Patterns compound across contexts.
 
 | Service | Prompt | Purpose |
 |---|---|---|
-| **Master** | `prompts/master.md` | All-in-one daily engine (session + distill + drill + plan) |
-| **Session Runner** | `prompts/session-runner.md` | Roleplay-only mode with NPC characters |
-| **Distiller** | `prompts/distiller.md` | Extract friction, chunks, patterns from transcripts |
-| **SRS Generator** | `prompts/srs-generator.md` | Create spaced repetition cards from failures |
-| **Session Planner** | `prompts/session-planner.md` | Plan tomorrow's session + micro-deploy mission |
-| **Meta-Observer** | `prompts/meta-observer.md` | Weekly system review — how the learner learns, what to adjust |
+| **Master** | `spanish/prompts/master.md` | All-in-one daily engine (session + distill + drill + plan) |
+| **Session Runner** | `spanish/prompts/session-runner.md` | Roleplay-only mode with NPC characters |
+| **Distiller** | `spanish/prompts/distiller.md` | Extract friction, chunks, patterns from transcripts |
+| **SRS Generator** | `spanish/prompts/srs-generator.md` | Create spaced repetition cards from failures |
+| **Session Planner** | `spanish/prompts/session-planner.md` | Plan tomorrow's session + micro-deploy mission |
+| **Meta-Observer** | `spanish/prompts/meta-observer.md` | Weekly system review — how the learner learns, what to adjust |
 
 What we **don't** build: dashboards, gamification, progress trees, curriculum planners.
 
 ## The Living Library
 
-The `language-reference/` directory is a self-contained Spanish learning compendium — useful to agent mode learners running sessions AND to anyone browsing the repo who wants a solid reference.
+The `spanish/language-reference/` directory is a self-contained Spanish learning compendium — useful to agent mode learners running sessions AND to anyone browsing the repo who wants a solid reference.
 
 **Four sections, one library:**
 
@@ -68,65 +71,54 @@ The `language-reference/` directory is a self-contained Spanish learning compend
 | **Field Guides** | FIELD-MANUAL + others | Deploy in the real world: tactical reference, German bridges, priority order |
 
 **Highlights:**
-- **[Core Vocabulary](language-reference/06-core-vocabulary.md)** — 1,000 words in 4 frequency bands with example sentences
-- **[Cognate Accelerator](language-reference/07-cognate-accelerator.md)** — 18 suffix rules that unlock 3,000+ words from English
-- **[Rapid Acquisition Methods](language-reference/11-rapid-acquisition-methods.md)** — Every proven technique from Output Hypothesis to Memory Palace
-- **[Cloze Exercises](language-reference/12-cloze-method.md)** — 200 fill-in-the-blank exercises across 6 skill tiers
-- **[Mnemonic Dictionary](language-reference/13-mnemonic-dictionary.md)** — Vivid keyword images for words that won't stick
-- **[AI Reverse Engineering Handbook](language-reference/14-ai-reverse-engineering-handbook.md)** — The meta of the meta: 7-layer stack, interference maps, error archaeology, compression theory, 7 novel AI techniques
+- **[Core Vocabulary](spanish/language-reference/06-core-vocabulary.md)** — 1,000 words in 4 frequency bands with example sentences
+- **[Cognate Accelerator](spanish/language-reference/07-cognate-accelerator.md)** — 18 suffix rules that unlock 3,000+ words from English
+- **[Rapid Acquisition Methods](spanish/language-reference/11-rapid-acquisition-methods.md)** — Every proven technique from Output Hypothesis to Memory Palace
+- **[Cloze Exercises](spanish/language-reference/12-cloze-method.md)** — 200 fill-in-the-blank exercises across 6 skill tiers
+- **[Mnemonic Dictionary](spanish/language-reference/13-mnemonic-dictionary.md)** — Vivid keyword images for words that won't stick
+- **[AI Reverse Engineering Handbook](spanish/language-reference/14-ai-reverse-engineering-handbook.md)** — The meta of the meta: 7-layer stack, interference maps, error archaeology, compression theory, 7 novel AI techniques
 
-Browse the full index: [language-reference/README.md](language-reference/README.md)
+Browse the full index: [spanish/language-reference/README.md](spanish/language-reference/README.md)
 
 ## Project Structure
+
+The repo root is a generic **engine**; each **study** is a directory that plugs into it.
+Spanish ships today as the reference study; Philosophy and Distributed Systems are on the way.
 
 ```
 velocidad/
 ├── config/
 │   ├── learner-profile-template.yaml  # Profile schema to copy into your data dir
 │   ├── paths.yaml.template            # Points the engine at your private data dir
-│   └── rules-of-immersion.md          # 15 rules the agent must follow
+│   └── rules-of-immersion.md          # The rules the agent must follow
 ├── meta/
-│   ├── language-architecture.md       # Spanish decomposed into 6 layers
-│   ├── memory-techniques.md           # Mnemonics + retention methods
-│   └── system-changelog.md            # How the system evolves
-├── worlds/
-│   ├── mcdonalds/scenario.md          # The safe lab — ordering, small talk
-│   ├── casa/scenario.md               # House workers — directions, logistics
-│   ├── vecinos/scenario.md            # Neighbors — real friendship
-│   └── errands/scenario.md            # Local errands — daily deployment
-├── prompts/                           # 6 agent mode prompts (see table above)
-├── sessions/                          # Daily transcripts + friction logs
-│   └── TEMPLATE.md                    # Session folder structure
-├── srs/
-│   ├── box1.md                        # New / just failed (daily review)
-│   ├── box2.md                        # Getting it (every other day)
-│   ├── box3.md                        # Almost owned (every 3 days)
-│   └── box4.md                        # Mastered (weekly)
-├── language-reference/                # 📚 The Living Library (see below)
-│   ├── README.md                      # Library index with reading orders
-│   ├── 00-05                          # System: how Spanish works (6 layers)
-│   ├── 06-core-vocabulary.md          # 1,000 essential words by frequency
-│   ├── 07-cognate-accelerator.md      # 18 suffix rules → 3,000+ words from English
-│   ├── 08-verb-reference.md           # 50 verbs, full conjugation tables
-│   ├── 09-numbers-time-dates.md       # Complete numeric system
-│   ├── 10-prepositions.md             # 20 prepositions + por vs para deep dive
-│   ├── 11-rapid-acquisition-methods.md  # 18 proven learning methods
-│   ├── 12-cloze-method.md             # Cloze deletion theory + 200 exercises
-│   ├── 13-mnemonic-dictionary.md      # 165+ keyword mnemonics for hard words
-│   ├── 14-ai-reverse-engineering-handbook.md  # Meta-meta: AI X-ray into Spanish
-│   ├── FIELD-MANUAL.md                # Daily deployment reference
-│   └── *.md                           # Visual ref, German bridges, priority order
-├── chunks/
-│   └── reference.md                   # Universal phrase reference
-├── patterns/
-│   └── reference.md                   # Universal sentence templates
-└── docs/
-    ├── KNOWLEDGE-ENGINE-OVERVIEW.md   # What this engine is + the production flywheel
-    ├── DOMAIN-SPEC.md                 # How to add a new domain
-    ├── LEARNER-DATA-SPEC.md           # Learner data directory contract
-    ├── WORLD-LADDER-TEMPLATE.md       # Blank L1-L5 scenario scaffold
-    ├── TECHNICAL-TRACK.md             # Guide for professional vocabulary domains
-    └── design.md                      # Vision, architecture, implementation
+│   └── system-changelog.md            # How the engine itself evolves
+├── scripts/                           # The velocidad CLI (coming in the next stage)
+├── docs/                              # Engine methodology + specs (see Documentation)
+│   ├── KNOWLEDGE-ENGINE-OVERVIEW.md   # What this engine is + the production flywheel
+│   ├── STUDY-SPEC.md                  # How to add a new study
+│   ├── SCENARIO-LADDER-TEMPLATE.md    # Blank L1-L5 scenario scaffold
+│   ├── LEARNER-DATA-SPEC.md           # Learner data directory contract
+│   ├── LEARNING-SCIENCE.md            # The drill layer: what each tool does to memory
+│   ├── USER-GUIDE.md                  # The operator's manual (a day / a week)
+│   ├── TECHNICAL-TRACK.md             # Guide: building a professional/technical study
+│   ├── design.md                      # Vision, architecture, implementation
+│   └── adr/                           # Architecture decision records
+├── spanish/                           # 🇪🇸 The Spanish study (first / reference study)
+│   ├── scenarios/
+│   │   ├── mcdonalds/scenario.md      # The safe lab — ordering, small talk
+│   │   ├── casa/scenario.md           # House workers — directions, logistics
+│   │   ├── vecinos/scenario.md        # Neighbors — real friendship
+│   │   └── errands/scenario.md        # Local errands — daily deployment
+│   ├── prompts/                       # 6 agent mode prompts (see table above)
+│   ├── sessions/TEMPLATE.md           # Session folder structure
+│   ├── srs/box1-4.md                  # 4-box Leitner SRS (blank template state)
+│   ├── language-reference/            # 📚 The Living Library (see below)
+│   ├── chunks/reference.md            # Universal phrase reference
+│   ├── patterns/reference.md          # Universal sentence templates
+│   └── meta/                          # language-architecture.md, memory-techniques.md
+├── philosophy/                        # 🏛️ Philosophy study (coming)
+└── distributed-systems/               # 💻 Distributed Systems study (coming)
 ```
 
 > **Your personal sessions, SRS state, mastery tracking, and profile live in a separate
@@ -143,12 +135,12 @@ cp config/paths.yaml.template config/paths.yaml
 #    See docs/LEARNER-DATA-SPEC.md for what that directory needs to contain.
 
 # 3. Open VS Code with agent mode (or any Claude/GPT interface)
-# 4. Paste the contents of prompts/master.md into the agent
-# 5. Tell it which world to run (e.g., "Today's world: mcdonalds")
+# 4. Paste the contents of spanish/prompts/master.md into the agent
+# 5. Tell it which scenario to run (e.g., "Today's scenario: mcdonalds")
 # 6. Do the session. The agent handles everything else.
 ```
 
-**First time?** `docs/LEARNER-DATA-SPEC.md` has the initialization checklist — seven files to create, takes about ten minutes.
+**First time?** `docs/LEARNER-DATA-SPEC.md` has the initialization checklist — seven files to create, takes about ten minutes. `docs/USER-GUIDE.md` walks through a full day and week.
 
 ## Architecture
 
@@ -166,7 +158,7 @@ The coupling between them is intentional and minimal: `config/paths.yaml` (gitig
 velocidad/             ← engine (public)
   config/paths.yaml    ← gitignored, points at your data dir
   docs/LEARNER-DATA-SPEC.md  ← the contract
-  prompts/             ← reads from {learner_data_dir}
+  spanish/prompts/     ← reads from {learner_data_dir}
 
 [your-private-repo]/velocidad/  ← learner data (private, your repo)
   profile.yaml
@@ -182,13 +174,14 @@ See the [Learner Data Spec](docs/LEARNER-DATA-SPEC.md) for the full directory tr
 
 ## Beyond Spanish
 
-The same engine generalizes to any domain where skill is built under pressure — professional and
-technical vocabulary, public speaking, music performance, negotiation. The flywheel, SRS, friction
-log, and L1-L5 ladder are domain-agnostic; only the scenarios and reference content change.
+The same engine generalizes to any **study** where skill is built under pressure — professional and
+technical fluency, philosophy and discourse, public speaking, negotiation. The flywheel, SRS,
+friction log, and L1-L5 ladder are study-agnostic; only the scenarios and reference content change.
+Spanish is the reference study; **Philosophy** and **Distributed Systems** studies are coming.
 
-- [`docs/KNOWLEDGE-ENGINE-OVERVIEW.md`](docs/KNOWLEDGE-ENGINE-OVERVIEW.md) — what the engine is and which domains fit
-- [`docs/DOMAIN-SPEC.md`](docs/DOMAIN-SPEC.md) — how to build a new domain that plugs into the engine
-- [`docs/TECHNICAL-TRACK.md`](docs/TECHNICAL-TRACK.md) — worked guide for professional / technical vocabulary domains
+- [`docs/KNOWLEDGE-ENGINE-OVERVIEW.md`](docs/KNOWLEDGE-ENGINE-OVERVIEW.md) — what the engine is and which studies fit
+- [`docs/STUDY-SPEC.md`](docs/STUDY-SPEC.md) — how to build a new study that plugs into the engine
+- [`docs/TECHNICAL-TRACK.md`](docs/TECHNICAL-TRACK.md) — worked guide for professional / technical studies
 
 ---
 
@@ -204,9 +197,12 @@ log, and L1-L5 ladder are domain-agnostic; only the scenarios and reference cont
 ## Documentation
 
 - [Knowledge Engine Overview](docs/KNOWLEDGE-ENGINE-OVERVIEW.md) — What the engine is and how the flywheel works
-- [Language Reference Library](language-reference/README.md) — Complete index of all reference material with reading orders
+- [User Guide](docs/USER-GUIDE.md) — The operator's manual: a day, a week, and what to do when something won't stick
+- [Learning Science](docs/LEARNING-SCIENCE.md) — What each drill tool does to your memory
+- [Language Reference Library](spanish/language-reference/README.md) — Complete index of all Spanish reference material with reading orders
 - [Learner Data Spec](docs/LEARNER-DATA-SPEC.md) — The contract between engine and personal data directory
-- [Domain Spec](docs/DOMAIN-SPEC.md) — How to add a new domain to the engine
+- [Study Spec](docs/STUDY-SPEC.md) — How to add a new study to the engine
+- [Scenario Ladder Template](docs/SCENARIO-LADDER-TEMPLATE.md) — Blank L1-L5 scaffold for building scenarios
 - [Design Document](docs/design.md) — Vision, architecture, ideas, implementation plan
 
 ---
@@ -224,13 +220,13 @@ cp config/paths.yaml.template config/paths.yaml
 # Edit config/paths.yaml — set learner_data_dir to your directory path
 ```
 
-**Step 3: Customize three things in your learner data directory:**
+**Step 3: Customize three things:**
 
 1. **`profile.yaml`** — Your motivation, real deployment targets (the actual people you'll practice with), and learning tendencies. Be specific. This is what the agent reads to personalize every session.
 
-2. **`worlds/`** (in your data dir, or fork from engine) — The included worlds reflect one person's life. Swap in yours. Each world is a markdown file with a 5-level scenario ladder.
+2. **`spanish/scenarios/`** — The included scenarios reflect one person's life. Swap in yours. Each scenario is a markdown file with a 5-level ladder.
 
-3. **`meta/language-architecture.md`** — The engine version is built for Spanish. If you're learning something else, copy it to your data directory and rewrite the 6 layers for that system.
+3. **`spanish/meta/language-architecture.md`** — The engine version is built for Spanish. If you're learning something else, start a new study (see `docs/STUDY-SPEC.md`) and write its architecture for that system.
 
 **What you don't need to touch to get started:** prompts, session template, chunk/pattern reference files. All universal.
 
@@ -238,6 +234,6 @@ cp config/paths.yaml.template config/paths.yaml
 
 **Organization:** Organic Arts LLC  
 **Engine License:** [GPL-3.0-or-later](LICENSE) — prompts, config, meta, methodology  
-**Content License:** [CC BY-SA 4.0](CONTENT-LICENSE) — language-reference, worlds, chunks, patterns, session templates  
+**Content License:** [CC BY-SA 4.0](CONTENT-LICENSE) — language-reference, scenarios, chunks, patterns, session templates  
 **Status:** Active  
-**Last Updated:** April 10, 2026
+**Last Updated:** June 2026

@@ -1,15 +1,16 @@
 # Velocidad: Technical Track Guide
 
-**Version:** 1.0.0
+**Version:** 1.1.0
 **Status:** Active
 
 ---
 
 ## What the Technical Track Is
 
-The Velocidad engine builds production fluency in any domain. Most documentation focuses on the
-Spanish language learning track. This guide explains how to apply the same engine to **professional
-and technical vocabulary** — the language of your actual job.
+The Velocidad engine builds production fluency in any study. Most documentation focuses on the
+Spanish language learning study. This guide explains how to apply the same engine to **professional
+and technical vocabulary** — the language of your actual job. (In this repo, the planned
+`distributed-systems/` study is a worked instance of this guide.)
 
 "Technical vocabulary" means the phrases, patterns, and conceptual language that distinguish
 someone who can perform in a professional context from someone who technically knows the material
@@ -27,10 +28,10 @@ being able to deploy it accurately, contextually, and confidently under pressure
 
 ## How This Differs From Spanish
 
-In the Spanish track, the deployment context is a specific physical interaction (ordering food,
+In the Spanish study, the deployment context is a specific physical interaction (ordering food,
 talking to a neighbor). The target form is another language.
 
-In a technical track:
+In a technical study:
 - **Deployment contexts** are professional scenarios: design reviews, team standups, incident
   response, slack threads, documentation, interviews, stakeholder presentations
 - **Target form** is accurate, confident professional language — the vocabulary register that
@@ -42,13 +43,13 @@ Everything else — the L1-L5 ladder, friction log, SRS boxes, session structure
 
 ---
 
-## Domain Structure for a Technical Track
+## Study Structure for a Technical Track
 
-A technical domain directory follows the same spec as any domain (see `docs/DOMAIN-SPEC.md`).
+A technical study directory follows the same spec as any study (see `docs/STUDY-SPEC.md`).
 
 ```
-{domain_name}/                 # e.g., "python-data", "platform-engineering"
-├── domain-config.md
+{study_name}/                  # e.g., "distributed-systems", "platform-engineering"
+├── study-config.md
 ├── scenarios/
 │   ├── arch-review.md         # "I need to explain my design to a senior engineer"
 │   ├── incident-postmortem.md # "I need to present a postmortem to stakeholders"
@@ -70,16 +71,16 @@ A technical domain directory follows the same spec as any domain (see `docs/DOMA
 
 **Safe to publish:**
 - Generic scenario structure (no real names, no employer-specific context)
-- Vocabulary organized around public domain concepts (general architecture terms, standard patterns)
-- Blank domain template (the scaffold, not the populated content)
+- Vocabulary organized around public-domain concepts (general architecture terms, standard patterns)
+- Blank study template (the scaffold, not the populated content)
 
 ---
 
-## Building Your Technical Domain
+## Building Your Technical Study
 
-### Step 1: Choose your vocabulary domain
+### Step 1: Choose your vocabulary area
 
-You don't need one big "technical" domain. You need the specific vocabulary area where your
+You don't need one big "technical" study. You need the specific vocabulary area where your
 production fluency is weakest. Examples:
 
 - System design vocabulary (for architecture interviews or design reviews)
@@ -99,12 +100,12 @@ Where do you actually need to perform? Not hypothetically — concretely:
 - Async Slack thread where a stakeholder asks for a technical risk summary
 - Job interview where the interviewer asks how you'd design a rate limiter
 
-Write those specific contexts as your scenarios. Use the `docs/WORLD-LADDER-TEMPLATE.md` scaffold.
+Write those specific contexts as your scenarios. Use the `docs/SCENARIO-LADDER-TEMPLATE.md` scaffold.
 
 ### Step 3: Populate reference files from public sources
 
 Build reference files that compile the vocabulary you need — organized by topic, not difficulty.
-Use public domain sources, your own synthesis of concepts, and vocabulary extracted from your
+Use public-domain sources, your own synthesis of concepts, and vocabulary extracted from your
 own friction sessions.
 
 **Never paste copyrighted content.** Summarize, rephrase, or write your own explanation.
@@ -112,7 +113,7 @@ The reference file is your own articulation of the concept, not a transcript of 
 
 ### Step 4: Practice with the agent on L1 scenarios
 
-Run the master prompt. Tell the agent which domain you are using. Ask it to play the L1 scenario
+Run the master prompt. Tell the agent which study you are using. Ask it to play the L1 scenario
 — the simplest version of your deployment context.
 
 Log what broke. Build SRS cards from the gaps. Drill. Return.
@@ -124,9 +125,9 @@ The ladder is evidence-based. Move up when the real context confirms it, not whe
 
 ---
 
-## Agent Rules for Technical Domains
+## Agent Rules for Technical Studies
 
-In the `domain-config.md` for a technical domain, include these immersion rules:
+In the `study-config.md` for a technical study, include these immersion rules:
 
 1. **Use realistic professional register** — not over-formal, not casual. Read the scenario's
    tone and match it.
@@ -140,14 +141,14 @@ In the `domain-config.md` for a technical domain, include these immersion rules:
 
 ---
 
-## Example: Blank Domain Template
+## Example: Blank Study Template
 
-A blank starter domain directory for a generic technical vocabulary domain. Copy this structure and
+A blank starter study directory for a generic technical vocabulary study. Copy this structure and
 fill in your content.
 
 ```
-generic-technical-domain/
-├── domain-config.md              # Fill in: name, deployment contexts, friction types
+generic-technical-study/
+├── study-config.md               # Fill in: name, deployment contexts, friction types
 ├── scenarios/
 │   └── design-review.md          # Fill in: L1-L5 ladder for explaining a system design
 ├── reference/
@@ -156,7 +157,7 @@ generic-technical-domain/
 └── patterns/reference.md              # 5-10 starter patterns; add from sessions
 ```
 
-This template is intentionally empty. Your content fills it. The domain becomes valuable as you
+This template is intentionally empty. Your content fills it. The study becomes valuable as you
 build it through real friction sessions — not before.
 
 ---
@@ -168,18 +169,18 @@ build it through real friction sessions — not before.
 - **Don't populate reference files from copyrighted books by copying text.** Summarize concepts in
   your own words. Test your understanding by writing the explanation yourself.
 - **Don't advance the ladder based on simulation.** Only real stakes count for level progression.
-- **Don't make the domain too broad.** "All technical vocabulary" is not a domain. "How I explain
-  database design decisions to my PM" is a domain.
+- **Don't make the study too broad.** "All technical vocabulary" is not a study. "How I explain
+  database design decisions to my PM" is a study.
 
 ---
 
 ## See Also
 
-- `docs/DOMAIN-SPEC.md` — Full domain specification
-- `docs/WORLD-LADDER-TEMPLATE.md` — Scaffold for building scenario files
+- `docs/STUDY-SPEC.md` — Full study specification
+- `docs/SCENARIO-LADDER-TEMPLATE.md` — Scaffold for building scenario files
 - `docs/KNOWLEDGE-ENGINE-OVERVIEW.md` — Engine overview and production-first methodology
 - `docs/LEARNER-DATA-SPEC.md` — Learner data structure (where your private content lives)
 
 ---
 
-*Last Updated: April 10, 2026*
+*Last Updated: June 2026*

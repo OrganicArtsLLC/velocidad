@@ -15,22 +15,22 @@
 
 learner_data_dir: "../your-life-repo/velocidad"
 
-# ── Domain configuration ─────────────────────────────────────────────────────
-# Velocidad supports multiple learning domains (Spanish, technical vocabulary, etc.)
-# Each domain is a directory that implements the structure in docs/DOMAIN-SPEC.md.
+# ── Study configuration ──────────────────────────────────────────────────────
+# Velocidad supports multiple studies (Spanish, philosophy, distributed systems, etc.)
+# Each study is a directory that implements the structure in docs/STUDY-SPEC.md.
 #
-# The first domain in the list is the default when the dashboard launches.
-# Use "." as the path if the domain data lives directly in learner_data_dir.
-# Use a sibling-repo path for private domain data you keep in a separate repo.
+# The first study in the list is the default when the dashboard launches.
+# Use an in-repo path (e.g. "./spanish") for a study that lives in this engine repo.
+# Use a sibling-repo path for private study data you keep in a separate repo.
 #
 # Examples:
-#   path: "."                               # Spanish track lives in learner_data_dir root
-#   path: "../work-private/technical"       # Technical track in a separate private repo
+#   path: "./spanish"                       # Spanish study lives in this engine repo
+#   path: "../work-private/distributed-systems"   # a private study in a separate repo
 
-domains:
+studies:
   - name: spanish
     display: "\U0001F1EA\U0001F1F8 Spanish"
-    path: "."
-  - name: your-domain
-    display: "\U0001F4DA Your Domain"
-    path: "../your-private-repo/your-domain-data"
+    path: "./spanish"
+  - name: your-study
+    display: "\U0001F4DA Your Study"
+    path: "../your-private-repo/your-study-data"
